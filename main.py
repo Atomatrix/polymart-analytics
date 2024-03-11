@@ -43,6 +43,10 @@ def webhook():
 
     data = request.get_json()
 
+    if data['event'] == 'ping':
+        print(f'Received a test ping!')
+        return '', 200
+
     # Return if the event isn't a user purchase.
     if data['event'] != 'product.user.purchase':
         return 'Invalid Event', 400
