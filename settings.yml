@@ -1,0 +1,20 @@
+# The port to listen for webhooks on
+web_port: 8080
+
+# Debug mode will show requests in the console
+debug_mode: true
+
+# Polymart API Key from https://polymart.org/account
+# Make sure it has "List Resources & Buyers" permission
+# This is required to get the price of a resource
+polymart_api_key: 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+
+# A list of all the webhook secrets for the multiple (if you have multiple resources) that you've set up.
+# For SLIGHTLY better performance, start with your most popular resources.
+webhook_secrets:
+  - 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+  - 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+  - 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
+
+# The file name of the CSV file
+result_file_name: 'data.csv'
