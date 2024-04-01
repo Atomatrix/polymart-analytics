@@ -60,9 +60,10 @@ def webhook():
 
     # Get date and time
     current_datetime = datetime.datetime.now()
-    formatted_time = current_datetime.strftime("%d/%m/%Y %H:%M")
+    formatted_date = current_datetime.strftime("%d/%m/%Y")
+    formatted_time = current_datetime.strftime("%H:%M")
 
-    new_data = [formatted_time, product_title, product_id, product_price, user_id]
+    new_data = [formatted_date, formatted_time, product_title, product_id, product_price, user_id]
 
     with open(settings['result_file_name'], mode='a', newline='') as file:
         csv_writer = csv.writer(file)
